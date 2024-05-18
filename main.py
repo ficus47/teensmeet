@@ -46,7 +46,7 @@ def enregistrer_video(nom_fichier="video_enregistree.avi", largeur=640, hauteur=
 def send(a):
   video = open(a, 'rb').read()
   sock = socket.socket()
-  sock.connect(('172.31.196.49', 8080))
+  sock.connect(('172.166.177.129', 8080))
   sock.send(video)
   response = sock.recv(8192)
   return response.decode()
