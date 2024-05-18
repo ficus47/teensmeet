@@ -16,7 +16,7 @@ def send(a):
   data = pickle.dumps(a)
   sock = socket.socket()
   if True:#try:
-    sock.connect(("172.16.5.4", 1111))
+    sock.connect(("172.166.177.129", 1111))
     sock.send(data)
     response = sock.recv(8192)
     return pickle.loads(response)
